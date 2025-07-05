@@ -86,6 +86,7 @@ export class Service{
         )
     } catch (error) {
         console.log("Appwrite service :: getPosts :: error",error)
+        return false
     }    
     }
 
@@ -98,6 +99,7 @@ export class Service{
             )
         } catch (error) {
             console.log("Appwrite service :: uploadFile :: error",error)
+            return false
         }
     }
 
@@ -115,7 +117,7 @@ export class Service{
     }
 
     getFilePreview(fileId){
-        return this.store.getFilePreview(
+        return this.store.getFileView(
             conf.appwriteBucketID,
             fileId
         )
