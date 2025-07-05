@@ -30,12 +30,12 @@ function Header() {
         },
       
         {
-            name:'All Posts',
+            name:'Blogs',
             slug:'/all-posts',
             active:authStatus
         },
         {
-            name:'Add Post',
+            name:'Create',
             slug:'/add-post',
             active:authStatus
         },
