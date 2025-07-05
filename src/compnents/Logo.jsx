@@ -1,8 +1,9 @@
-import BlogSphere from "../assets/BlogSphere1.png"
+import blog from "../assets/blog.png"
 function Logo() {
     return ( 
-        <div className="w-[120px] ">
-            <img src={BlogSphere} alt="" />
+        <div className="w-[40px] flex items-center gap-2 text-lg font-extrabold">
+            <img src={blog} alt="Logo" />
+            BlogSphere
         </div>
      );
 }

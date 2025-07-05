@@ -3,7 +3,6 @@ import appwriteService from "../Appwrite/config";
 import { Link } from "react-router-dom";
 
 function Postcard({ $id, title, featuredImage }) {
-    console.log("Image Preview URL:", appwriteService.getFilePreview(featuredImage));
 
     return (
         

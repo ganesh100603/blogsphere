@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import authservice from "../../Appwrite/auth";
 import { logout } from "../../Store/authSlice";
 
-function LogoutBtn() {
+function LogoutBtn({className}) {
     const dispatch= useDispatch()
     const logoutHandler=()=>{
         authservice.logout().then(()=>{
@@ -11,7 +11,7 @@ function LogoutBtn() {
         })
     }
     return ( 
-        <button onClick={logoutHandler} className="inline-block px-6 duration-200 hover:bg-gray-200 rounded-full">
+        <button onClick={logoutHandler} className={`inline-block duration-200 rounded-full ${className}`}>
             Logout
         </button>
      );
