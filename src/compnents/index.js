@@ -12,6 +12,8 @@ import Protected from "./AuthLayout";
 import Select from "./Select"
 import Button from "./Button"
 import Input from "./Input"
+import Loader from "./Loader";
+
 export {
     Header,
     Footer,
@@ -26,5 +28,6 @@ export {
     Protected,
     Select,
     Button,
-    Input
+    Input,
+    Loader
 }

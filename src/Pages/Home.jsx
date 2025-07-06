@@ -19,7 +19,7 @@ function Home() {
                                 your words can spark ideas, build communities, and inspire the world. Start your journey 
                                 as a creator today.</p>
                         <Link to={"/add-post"}>
-                        <button className="p-2 text-xl bg-black text-white mt-4 rounded-md 
+                        <button className="p-2 text-lg bg-black text-white mt-4 rounded-md 
                         transition-transform duration-200 transform hover:scale-105 active:scale-95">Get Started</button>
                         </Link>
                         </div>

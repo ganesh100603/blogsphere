@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import authservice from './Appwrite/auth'
 import {login,logout} from './Store/authSlice'
-import { Footer, Header } from './compnents'
+import { Footer, Header,Loader } from './compnents'
 import { Outlet } from 'react-router-dom'
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [authLoading, setAuthLoading] = useState(true)
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -20,10 +20,11 @@ function App() {
         dispatch(logout())
       }
     })
-    .finally(()=>setLoading(false))
+    .finally(()=>setAuthLoading(false))
   },[])
 
-  return !loading?(
+  return !authLoading?
+  (
     <div className='min-h-screen flex flex-col justify-between '>
       {/* <div className='w-full block'> */}
       <Header/>
@@ -35,8 +36,9 @@ function App() {
       <Footer/>
     </div>
     // </div>
-  ) 
-  : null 
+  ):(
+    <Loader/>
+  )
 }
 
 export default App
