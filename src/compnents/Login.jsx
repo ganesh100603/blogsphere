@@ -30,9 +30,9 @@ function Login() {
     return ( 
         <div className='w-full min-h-[85vh] flex items-center justify-center'>
             
-        <div className={`w-full sm:max-w-md max-w-sm rounded-xl p-10 border border-black shadow-lg shadow-slate-400 bg-white`}>
+        <div className={`w-full sm:max-w-lg max-w-sm rounded-xl p-10 border border-black shadow-lg shadow-slate-400 bg-white`}>
 
-        <div className="mb-2 w-full flex justify-center">
+        <div className="mb-4 w-full flex justify-center">
             <Logo/>
         </div>
 
