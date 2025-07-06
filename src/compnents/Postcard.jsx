@@ -8,12 +8,12 @@ function Postcard({ $id, title, featuredImage }) {
         
         <Link to={`/post/${$id}`}>
             <div className="w-full bg-gray-100 rounded-xl p-4">
-                <div className="w-full justify-center mb-4">
+                <div className="w-full justify-center">
                     {featuredImage ? (
                         <img
                             src={appwriteService.getFilePreview(featuredImage)}
                             alt={title}
-                            className="rounded-xl"
+                            className="w-full h-44 sm:h-48 md:h-56 lg:h-64 object-cover rounded-xl"
                         />
                         
                     ) : (

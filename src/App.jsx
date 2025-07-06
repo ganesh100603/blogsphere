@@ -8,6 +8,7 @@ import { Outlet } from 'react-router-dom'
 
 function App() {
   const [authLoading, setAuthLoading] = useState(true)
+  const [fadeIn, setFadeIn] = useState(false)
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -23,9 +24,16 @@ function App() {
     .finally(()=>setAuthLoading(false))
   },[])
 
+  useEffect(()=>{
+    if(!authLoading){
+      const timer = setTimeout(()=>setFadeIn(true),50)
+      return ()=>clearTimeout(timer)
+    }
+  },[authLoading])
+
   return !authLoading?
   (
-    <div className='min-h-screen flex flex-col justify-between '>
+    <div className={`min-h-screen flex flex-col justify-between transition-opacity duration-700 ${fadeIn?"opacity-100":"opacity-0"}`}>
       {/* <div className='w-full block'> */}
       <Header/>
       <main>
